@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page and Registration Form Design</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+	<script src="./Scripts/library/jquery.js"></script>
+	<style>
+		input{
+			padding: 6px;
+			border-radius: 8px;
+		}
+		button{
+			padding: 4px;
+			border-radius: 20px;
+		}
+	</style>
+	<script>
+		$(Document).ready(function(){
+			$( ".register-form" ).hide();
+			$(".register").click(function(){
+				$( ".register-form" ).show();
+				$( ".login-form" ).hide();
+			});
+			$(".login").click(function(){
+				$( ".register-form" ).hide();
+				$( ".login-form" ).show();
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="login-page">
+<div class ="form">
+<form class = "register-form" id="register">
+	<input type="text" placeholder="name"/>
+	<input type="text" placeholder="password"/>
+	<input type="text" placeholder="email id"/>
+
+	<button>Create</button>
+	<p class="message">Already Registered?<a href="#" class="login">Login</a></p>
+</form>
+
+<form class="login-form">
+	<input type="text" placeholder=" user name"/>
+	<input type="password" placeholder="password"/>
+	<button> login</button>
+	<p class="message">Not Registered? <a href="#" class="register" >Register</a></p>
+	
+
+</form>
+</div>
+</div>
+</body>
+</html>
